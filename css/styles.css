@@ -1,0 +1,883 @@
+/* --page styles--  */
+
+body{
+    width: 100%;			/* fill the page width */
+    margin-top: 0px;			/* remove gapping between the element and the top of the page */
+    margin-bottom: 0px;		/* remove gapping between the element and the bottom of the page */
+    margin-left: auto;   			/* centre element on page */
+    margin-right: auto;			/* centre element on page */
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --colour element style-- */
+
+#backgd-colour{
+    background-color: #24292e;		/* set background colour of element */
+}
+
+
+/*  -- image styles-- */
+
+#panda{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+#panda2{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+#oops{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+#super-user{
+width: 250px;
+}
+#power-user{
+width: 200px;
+}
+#power-user2{
+width: 200px;
+float: right;
+}
+#user{
+width: 125px;
+float: left;
+}
+#joy{
+width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+/*  --background image styles-- */
+
+.backgd-img{
+    background: url(../img/links.jpg) center;	/* set the background image and centre it within the container */
+    background-position: center;		/* centre the image on the screen */
+    background-repeat: no-repeat;		/* if the image does not fill the container - do not repeat the image */
+    background-size: cover;  		/* stretch the image to fit the container */
+    border-bottom: 2px solid black;	/* solid black line on the bottom of the image */
+}
+.backgd-img-panda{
+    background: url(../img/masters.jpg) center;	/* set the background image and centre it within the container */
+    background-position: center;		/* centre the image on the screen */
+    background-repeat: no-repeat;		/* if the image does not fill the container - do not repeat the image */
+    background-size: cover;  		/* stretch the image to fit the container */
+    border-bottom: 2px solid black;	/* solid black line on the bottom of the image */
+    border-top: 2px solid black;
+}
+.rgba-overlay{			/* overlays background image with transparent colour */
+    margin-left: auto;                       	/* centre element on page */
+    margin-right: auto;			/* centre element on page */
+    width: 100%;                             	/* set the width of the element to full page */
+    background-color: rgba(9,62,93,0.4);	/* set blue transparent background */
+}
+
+/*  --header banner styles-- */
+
+.banner{                     		/* header banner menu at the top of the page */
+    width: 100%;                                	/* fill the screen */
+    margin-top: 0px;                            	/* remove gapping between the element and the top of the page */
+    margin-left: auto;                          	/* centre element on page */
+    margin-right: auto;			/* centre element on page */
+    background-color: #24292e;                  	/* set element background colour */
+    border-bottom: 2px solid #add8e6;         	/* set light blue border on bottom edge of element */
+    height: 55px;                               	/* set the height of the element */
+}
+.banner-left{                                  	/* divide the banner into two sections - here the left div */
+    width: 30%;                                 	/* set the width of the left div */
+    height: 55px;                               	/* set the height to that of the banner */
+    float: left;                    		/* position the element in the left of the banner */
+    text-align: right; 			/* position the logo image to the right of the element */
+}
+.banner-right{                     		/* divide the banner into two sections - here the right div */
+    width: 65%;                                 	/* set the width of the right div - this will allow the banner element to hold both divs side by side */
+    float: right;  			/* position the element in the right of the banner */
+    height: 55px;                               	/* set the height to that of the banner */
+}
+
+
+/* --mobile menu & navigation styles-- */
+
+nav{                                                	/* set style for navigation links on banner menu */
+    float: right;                                     	/* display links to the right of the element */
+}
+#menu-icon{                                          	/* mobile menu (hamburger) image styles */
+    display: unset;                              	/* set image to hide when screen is large enough to display all links */
+    width: 40px;                                 	/* set image width */
+    height: 40px;                                 	/* set image height */
+    background: #24292e url(../img/menu-icon.png) center;	/* set image background colour, alignment and img location */
+}
+ul{                                                               
+    list-style: none;			/* remove link markers for menu list */
+}
+li{ 				/* display menu links in a row going from right to left */
+    display: inline-block;		/* display in a row  */
+    float: left;			/* position links from right to left */ 
+    padding: 5px 15px 0px 15px; 		/* set padding between links */
+    font-family: 'Roboto', sans-serif;	/* set font face for links */
+}
+
+
+
+/*MEDIA QUERY*/
+
+@media only screen and (max-width : 992px) {	/* when a window size of 992px or smaller is detected the mobile menu is activated */
+
+header{                                                          
+    position: absolute;                                             	/* set position -- non static */
+}
+#menu-icon{
+    display:inline-block;			/* display in a row with other content */
+}
+nav ul, nav:active ul{                                		/* set styling for drop down mobile menu */ 
+    display: none;
+    position: absolute;                                             	/* set position -- non static*/
+    padding: 0px 2px 0px 2px;                                   	/* pad menu items right and left */
+    background: #222;                                                 	/* set background colour for drop down */
+    border: 2px solid #add8e6;                                       	/* set border size, type and colour */
+    right: 20px;                                                    	/* set position from right */
+    top: 20px;				/* set position from top */
+    width: 15%;				/* set width */
+    border-radius: 4px 4px 4px 4px;                               	/* rounded corners on the drop down menu */
+}
+nav li{                                                           	/* style menu items */
+    text-align: center;				/* centre the text in the menu  */
+    width: 100%;				/* set width */
+    padding: 10px 0px;				/* pad links */
+    margin: 0px;				/* set margin to zero */
+}
+nav:hover ul{
+    display: block;                                                  	/* display as block element */
+}
+}
+
+/* --form styles-- */
+
+.form-login{ 	                                  /* class element used to position and size forms in divs */
+    margin-left: auto;   			/* center element on page */
+    margin-right: auto;			/* center element on page */
+    font-size: 14pt;			/* set font size of element */
+    width: 450px;                               	/* set width of element on the page */
+    min-width: 450px;			/* set minimum width to preserve structure of the element on smaller screens */
+    background-color: rgba(9,62,93,0.6);	/* set blue transparent background. */
+}
+.login-head{                                   	/* style login div element */
+    color: white;			/* text white */
+    font-size: 20pt;			/* text size */
+    font-weight: bold;			/* text bold */
+    text-align: center; 	 		/* centre text in element */
+    font-family: 'Roboto', sans-serif;             	/* font style -- type face */          
+}
+.login-sub{                                   	/* style login div element */
+    color: orange;			/* text colour orange */
+    font-size: 12pt;			/* text size */
+    text-align: center; 			/* centre text in element */
+    font-family: 'Raleway', serif;                  	/* font style -- type face */
+}
+.login-row{                                     	/* style login div element */
+    font-family: 'Raleway', serif;		/* font style -- type face */
+    color: white;			/* text white */
+    padding: 10px 50px 10px 100px;             /* pad content in the element (top -- right -- bottom -- left */
+}
+
+.login-bottom{                                  	/* style login div element */
+  padding: 25px 0px 50px 100px;                 /* pad content in the element (top -- right -- bottom -- left */
+}
+.login-register{                                      	/* style login div element */
+    font-family: 'Raleway', serif;		/* font style -- type face */
+    text-align: center;                               	/* aligns text in the center of the element */
+    font-size: 14pt;			/* text size */
+    color: black;			/* text colour */
+    background-color: rgba(173, 216, 230, 0.2);      /* sets background colour of the element to blue with opacity of 0.2 (transparency value) */
+    padding: 25px 0px 25px 0px;		/* pad content in the element (top -- right -- bottom -- left */
+}
+
+.form{                                                 	/* form field styling */
+    padding: 10px;			/* pad all sides by 10px */
+//background-color: #cbd8ed;     
+background-color: transparent;	/* set the form background to transparent */
+    border: 1px solid white;		/* set border to thin solid white */
+    font-size: 12pt;			/* text size */
+    font-family: 'Raleway', serif;		/* font face -- text style */
+    color: white;			/* text colour */
+    -moz-border-radius: 3px 3px 3px 3px;	/* round the corners of the button element (FIREFOX 3.0) */
+    -webkit-border-radius: 3px 3px 3px 3px;	/* round the corners of the button element (SAFARI 3.1, CHROME 4.0) */
+    -khtml-border-radius: 3px 3px 3px 3px; 	/* round the corners of the button element (OLDER BROWSERS) */
+    border-radius: 3px 3px 3px 3px;             	/* round the corners of the button element (ALL CURRENT BROWSERS) */
+}
+.formAlert{                                            
+   font-weight: bold;
+font-family: 'Raleway', serif;  
+}
+.form-black{                                                 /*set styling for form fields*/
+  padding: 2px;                                        /*set padding around content of form field*/
+  border: 1px solid #222;                              /*set a border around the form field*/
+  font-size: 12pt;                                     /*set size of text in the form fields*/
+  font-family: 'Raleway', serif;                   /*set the type face of the text in the form fields*/
+  color: black;                                         /*set the colour of the text in the form fields*/
+  background-color: transparent;                       /*set the form backgrounds to transparent*/
+  -moz-border-radius: 3px 3px 3px 3px;                 /*set the corners of the form fields to rounded - cross browser functionality included*/
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -khtml-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+}
+#form-square{
+border: 1px solid #222;
+}
+#email-field{
+border: 1px solid #222;
+}
+#confirm-email-field{
+border: 1px solid #222;
+}
+#password-field{
+border: 1px solid #222;
+}
+#confirm-password-field{
+border: 1px solid #222;
+}
+#firstname-field{
+border: 1px solid #222;
+}
+#surname-field{
+border: 1px solid #222;
+}
+#code-field{
+border: 1px solid #222;
+}
+
+.pad{
+  font-family: 'Raleway', serif;
+
+  color: black;
+  height: 30px;
+  width: 200px;
+}
+.pad-box{
+  font-family: 'Raleway', serif;
+background-color: #cbd8ed;
+  color: black;
+  height: 30px;
+  width: 200px;
+}
+#center-form{
+    margin-left: auto;                        /*center element on page*/
+    margin-right: auto;
+    display: flex; 
+    justify-content: center;
+}
+#holename-field{
+    margin-left: auto;                        /*center element on page*/
+    margin-right: auto;
+    display: flex; 
+    justify-content: center;
+}
+.center-form-input{
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #222;
+    -moz-border-radius: 3px 3px 3px 3px;                /*round the corners of the button element (FIREFOX 3.0)*/
+    -webkit-border-radius: 3px 3px 3px 3px;             /*round the corners of the button element (SAFARI 3.1, CHROME 4.0)*/
+    -khtml-border-radius: 3px 3px 3px 3px;              /*round the corners of the button element (OLDER BROWSERS)*/
+    border-radius: 3px 3px 3px 3px;     
+}
+/* --button styles--  */
+
+.btn{
+    border: 1px solid white;                     	/* set solid white border around button element */
+    color: white;                                       	/* text colour is set to white */
+    padding: 10px;                                      	/* padding all around the content of the element - 10px */
+    background-color: transparent;                	/* background colour set to transparent */
+    text-decoration: none;                              	/* remove all decoration from text */
+    font-size: 15pt;			/* set text size */
+    font-family: 'Raleway', serif;		/* set font style */
+    -moz-border-radius: 3px 3px 3px 3px;	/* round the corners of the button element (FIREFOX 3.0) */
+    -webkit-border-radius: 3px 3px 3px 3px;	/* round the corners of the button element (SAFARI 3.1, CHROME 4.0) */
+    -khtml-border-radius: 3px 3px 3px 3px; 	/* round the corners of the button element (OLDER BROWSERS) */
+    border-radius: 3px 3px 3px 3px;             	/* round the corners of the button element (ALL CURRENT BROWSERS) */
+}
+.btn-black{                                                /*alterative button styling as descibed above*/
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  background-color: white;
+  //text-decoration: none;
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -khtml-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+
+/* --table styles-- */
+
+table{
+  border-collapse: collapse;		/* set table borders to collapse into 'skinny' border. */
+}
+
+
+/* --links & styles-- */
+
+a.nav-link{                                           	/*style links*/
+  color: white;                                     	/* set text colour to white */
+  text-decoration: none;                      	/* remove link decorations */
+}
+a.nav-link:visited{                                   	/* keep style for links even after they have been visited */
+  color: white;			/* set text colour to white */
+  text-decoration: none;		/* remove link decorations */
+}
+a.link{                                            	/* alterative style for links -- loggedin.php */
+  color: black;			/* set text colour to black */
+  text-decoration: none;		/* remove link decorations */
+}
+a.link:visited{			/* keep style for links even after they have been visited */
+  color: black;			/* set text colour to black */
+  text-decoration: none;		/* remove link decorations */
+}
+a.link-loggedin{                                            	/* alterative style for links -- loggedin.php */
+  color: orange;			/* set text colour to black */
+  font-weight: bold;
+}
+a.link-loggedin:visited{			/* keep style for links even after they have been visited */
+  color: blue;			/* set text colour to black */
+  font-weight: bold;
+}
+
+
+/* --java script image carousel styles-- */
+
+*{box-sizing: border-box;}
+
+.slideshow-container {
+    width: 100%;
+    border-top: 2px solid black;
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;			/* hide the images by default */
+}
+.text {				/* caption text */
+    font-family: 'Raleway', serif;
+    color: white;
+    font-size: 60pt;
+    padding: 8px 12px;
+    position: absolute;
+    top: 40%; //8px;
+    width: 100%;
+    text-align: center;
+}
+.fade {				/* fade animation */
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* --text block element styles-- */
+
+.boxes-wrapper-foot{
+    width: 90%;
+    margin-left: auto;                        /*center element on page*/
+    margin-right: auto;
+}
+.boxes-wrapper-middle{
+    width: 75%;
+    margin-left: auto;                        /*center element on page*/
+    margin-right: auto;
+}
+.boxes{
+    font-family: 'Raleway', serif;
+    color: white;
+    font-size: 10pt;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 20%;
+    vertical-align: top;   
+    text-align: justify;
+    text-justify: inter-word;
+    border-right: 1px solid white;
+}
+.boxes-last{
+    font-family: 'Raleway', serif;
+    color: white;
+    font-size: 10pt;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 20%;
+    vertical-align: top;   
+    text-align: justify;
+    text-justify: inter-word;
+}
+.boxes-middle{
+    width: 30%;
+    font-family: 'Raleway', serif;
+    color: white;
+    font-size: 12pt;
+    padding-left: 100px;
+    padding-right: 100px;
+    vertical-align: top;   
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.boxes-loggedin { 
+      background: transparent; 
+      width: 100%; 
+      margin-left: auto;
+      margin-right: auto;
+      height:200px; 
+ } 
+.box-loggedin-left { 
+    font-family: 'Raleway', serif;
+    float:left;  
+    background: transparent; 
+    width:45%; 
+    text-align: justify;
+    text-justify: inter-word;
+    color: black; 
+} 
+.box-loggedin-right{ 
+    font-family: 'Raleway', serif;
+    float:right; 
+    background: transparent;
+    width:45%;
+    text-align: justify;
+    text-justify: inter-word;
+    color: black;
+} 
+.box-title{
+height:30px;
+    line-height: 30px; 
+font-family: 'Raleway', serif;
+font-size: 18pt;
+font-weight: bold;
+//border: 1px solid black;
+}
+.box-icon{
+//border: 1px solid black;
+vertical-align: top;     
+    width: 30px;                                                   	/* set image width */
+    height: 30px;                                               
+    display:inline-block;
+
+}
+
+/* --parallax styles-- */
+
+.parallax{						/* loggedin.php */
+  background: url(../img/logo2.png) no-repeat center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-attachment: fixed;
+  height: 50px;
+  border: 1px solid black;
+-moz-border-radius: 3px 3px 3px 3px;                /*round the corners of the button element (FIREFOX 3.0)*/
+    -webkit-border-radius: 3px 3px 3px 3px;             /*round the corners of the button element (SAFARI 3.1, CHROME 4.0)*/
+    -khtml-border-radius: 3px 3px 3px 3px;              /*round the corners of the button element (OLDER BROWSERS)*/
+    border-radius: 3px 3px 3px 3px;  
+}
+.parallax2{						/* loggedin.php */
+  background: url(../img/logo3.png) no-repeat center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-attachment: fixed;
+  height: 50px;
+  border: 1px solid black;
+-moz-border-radius: 3px 3px 3px 3px;                /*round the corners of the button element (FIREFOX 3.0)*/
+    -webkit-border-radius: 3px 3px 3px 3px;             /*round the corners of the button element (SAFARI 3.1, CHROME 4.0)*/
+    -khtml-border-radius: 3px 3px 3px 3px;              /*round the corners of the button element (OLDER BROWSERS)*/
+    border-radius: 3px 3px 3px 3px;  
+}
+
+/* -- leaderboard styles-- */
+
+.nam{
+    background-color: yellow;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+}
+.nat{
+    font-family: 'Roboto', sans-serif;    
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+}
+.hol{
+    font-family: 'Roboto', sans-serif;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+.champ{
+    background-color: red;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+.day{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    background-color: white;
+}
+.gross{
+    font-family: 'Roboto', sans-serif;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    background-color: white;
+}
+.champblue{
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+.champgreen{
+    font-family: 'Roboto', sans-serif;
+    background-color: green;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+.yellow{
+    font-family: 'Roboto', sans-serif;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-top: 2px solid #999;
+}
+.red{
+    background-color: red;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+}
+.white{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-top: 2px solid #999;    
+}
+.blue{
+    background-color: #6fc4fb;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+}
+.white-bottom-top{
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-top: 2px solid #999; 
+    border-bottom: 2px solid #999;   
+}
+.yellow-bottom-top{
+    font-family: 'Raleway', serif;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+}
+.red-bottom-top{
+    background-color: red;
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+}
+.blue-bottom-top{
+    background-color: #6fc4fb;
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+}
+.table-decoration-top-bottom{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 12PT;
+    padding: 5PX 20PX 5PX 20PX;
+    text-align: center;
+    border-top: 2px solid #999; 
+    border-bottom: 2px solid #999;    
+}
+.table-decoration-no-border{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 12PT;
+    padding: 5PX 20PX 5PX 20PX;
+    text-align: center;       
+}
+#fileToUpload{
+font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 12PT;
+    padding: 5PX 20PX 5PX 20PX;
+    text-align: center;
+}
+
+/*  --footer styles-- */
+
+.footer{                                      		/* footer at the bottom of the page*/
+    width: 100%;                                	/* fill the screen width */
+    margin-top: 0px;                            	/* remove gapping between the elements */
+    margin-left: auto;                          	/* centre element on page */
+    margin-right: auto;			/* centre element on page */
+    background-color: #222;                  	/* set element background colour */
+    border-top: 2px solid #add8e6;            	/* set  border on top edge of element --light blue */
+    height: 100px;                               	/* set the height of the element */
+}
+.footer-icon-wrapper{			/* container for the social media icons */
+    height: 50px;			/* set height of element */
+    width: 425px;			/* set width of element */
+    margin-left: auto;                          	/* centre element on page */
+    margin-right: auto;			/* centre element on page */
+    padding-left: 12px;			
+    padding-top: 1px;
+}
+.footer-icon{
+    height: 45px;
+    width: 100px;
+    float: left;
+    line-height: 45px;
+    text-align: center;
+}
+.footer-con img{
+    vertical-align: middle;
+}
+#footer-img-twitter{     
+    width: 35px;                                                   	/* set image width */
+    height: 35px;                                              
+    display:inline-block;                                          
+    background: url(../img/twitter.png) no-repeat;        	/* set image location */
+}
+a:hover#footer-img-twitter{           
+    background: #222 url(../img/twitterBlack.png) no-repeat;          /* change icon colour to black on mouse-over*/
+}
+#footer-img-instagram{        
+    vertical-align: middle;   
+    width: 35px;                                                  	/* set image width */
+    height: 35px;                                               
+    display:inline-block;                                           
+    background: url(../img/instagram.png) no-repeat;   	/* set image location */
+}
+a:hover#footer-img-instagram{ 
+    background: #222 url(../img/instagramBlack.png) no-repeat;       	/* change icon colour to black on mouse-over*/
+}
+#footer-img-facebook{       
+    vertical-align: middle;     
+    width: 35px;                                                   	/* set image width */
+    height: 35px;                                               
+    display:inline-block;                                           
+    background: url(../img/facebook.png) no-repeat;    	/* set image location */
+}
+a:hover#footer-img-facebook{ 
+    background: #222 url(../img/facebookBlack.png) no-repeat;		/* change icon colour to black on mouse-over*/
+}
+#footer-img-linkedin{   
+    vertical-align: middle;         
+    width: 35px;				/* set image width */
+    height: 35px;                                               
+    display:inline-block;                                           
+    background: url(../img/linkedin.png) no-repeat;	/* set image location */
+}
+a:hover#footer-img-linkedin{ 
+    background: #222 url(../img/linkedinBlack.png) no-repeat; 	/* change icon to black on mouse-over */
+}
+.footer-text{
+    text-align: center;
+    font-family: 'Raleway', serif;
+    color: white
+}
+.footer-text-copyright{
+    text-align: center;
+    font-family: 'Raleway', serif;
+    color: orange;
+}
+
+/* --containers to hold elements-- */
+
+.container{			/* required for loggedin.php -- logged in as */
+    width: 960px;
+    margin: 0 auto;
+} 
+
+/* --empty containers to seperate elements */
+.sp5px{      
+    height: 5px;			/* spacer element 5px high */
+}
+
+.sp25px{      
+    height: 25px;			/* spacer element 25px high */
+}
+.sp50px{
+    height: 50px;			/* spacer element 50px high */
+}
+.sp2px{      
+    height: 2px;			/* spacer element 2px high */
+}
+
+/* --colour containers to seperate elements */
+
+.sp-colour1px{      
+    height: 1px;			/* spacer element 25px high */
+background-color: #222;
+}
+.sp-colour-green1px{      
+    height: 1px;			/* spacer element 25px high */
+background-color: green;
+}
+
+/* --text styles-- */
+
+h1{
+font-family: 'Raleway', serif;
+}
+h2{
+font-family: 'Raleway', serif;
+}
+#page-title{
+    font-family: 'Raleway', serif;
+    height: 200px;
+font-size: 50pt;
+}
+#logged-in-as{
+    font-family: 'Raleway', serif;
+    height: 50px;
+}
+#title-description{
+font-family: 'Raleway', serif;
+    height: 70px;
+width: 600px;
+padding: 5px 0px 0px 35px;
+//border: 1px solid black;
+}
+#opps-text{
+font-family: 'Raleway', serif;
+    height: 70px;
+text-align: center;
+padding: 5px 0px 0px 35px;
+}
+.script{
+    font-size: 25pt;
+    font-family: 'Satisfy', serif;
+    color: #222;
+}
+.title-logout{
+ 
+    color: black;
+}
+#logged-out{
+    font-family: 'Raleway', serif;
+    height: 50px;
+color: black;
+}
+
+.holes{
+font-family: 'Roboto', sans-serif;
+font-size: 20pt;
+width: 60px;
+text-align: center;
+}
+.holes2{
+font-family: 'Roboto', sans-serif;
+font-size: 20pt;
+width: 60px;
+}
+.stats{
+ margin-left: auto;
+    margin-right: auto;
+//width: 600px;
+font-family: 'Roboto', sans-serif;
+font-size: 15pt;
+color: black;
+}
+.stats-td{
+width: 300px;
+}
+
+#help-paragraph{
+ font-family: 'Raleway', serif;
+    font-size: 12pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+                        
+ 
